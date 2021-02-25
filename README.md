@@ -63,6 +63,7 @@ E-commerce site
           | - Related Items & Comparison
 - server
   | - server.js (api folder ?)
+- config.js (put your token here)
 - README.md (can link to the component READMEs)
 - .gitignore - (node_modules, API keys, the bundle)
 - package.json

@@ -6,7 +6,7 @@ import Style from './Style';
 
 import css from './StyleSelector.css';
 
-const StyleSelector = ({ styles, styleSelector }) => {
+const StyleSelector = ({ styles, selected, styleSelector }) => {
   const n = styles.length;
   let row1;
   let row2;
@@ -20,7 +20,7 @@ const StyleSelector = ({ styles, styleSelector }) => {
 
   return (
     <div className={css.styleSelector}>
-      <h2>style selector (click to view style)</h2>
+      <p>Style &gt; {selected}</p>
       <div className={css.stylesDisplay}>
         <div className={css.row1}>
           {row1.map((style) => (
@@ -52,6 +52,7 @@ StyleSelector.propTypes = {
     photos: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
     skus: PropTypes.objectOf(PropTypes.object).isRequired,
   })).isRequired,
+  selected: PropTypes.string.isRequired,
   styleSelector: PropTypes.func.isRequired,
 };
 

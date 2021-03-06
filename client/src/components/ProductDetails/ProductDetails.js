@@ -102,9 +102,13 @@ class ProductDetails extends React.Component {
               styles={styles.results}
               styleSelector={this.styleSelector}
             />
-            <ProductInformation product={product} rating={rating} />
+            <ProductInformation
+              product={product}
+              rating={rating}
+            />
             <StyleSelector
               styles={styles.results}
+              selected={style.name}
               styleSelector={this.styleSelector}
             />
             <Checkout

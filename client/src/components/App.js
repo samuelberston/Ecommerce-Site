@@ -25,9 +25,7 @@ class App extends React.Component {
     };
     axios.post('/interactions', body)
       .then(() => {})
-      .catch((err) => {
-        console.error(err);
-      });
+      .catch((err) => { throw err; });
   }
 
   constructor(props) {
@@ -35,7 +33,7 @@ class App extends React.Component {
     const queryParams = url.parse(window.location.search, true).query;
     const productId = parseInt(queryParams.product_id, 10);
     this.state = {
-      productId: !Number.isNaN(productId) ? productId : 14931,
+      productId: !Number.isNaN(productId) ? productId : 1,
       productName: 'Manuela Pants',
     };
     this.getProductName = this.getProductName.bind(this);

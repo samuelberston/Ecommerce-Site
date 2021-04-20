@@ -7,7 +7,7 @@
     "test": "jest --coverage",
     "react-dev": "webpack --mode development --watch",
     "react-pro": "webpack --mode production",
-    "server-dev": "npx nodemon server/server.js"
+    "start": "npx nodemon server/server.js"
   },
   "repository": {
     "type": "git",

@@ -33,7 +33,7 @@ class App extends React.Component {
     const queryParams = url.parse(window.location.search, true).query;
     const productId = parseInt(queryParams.product_id, 10);
     this.state = {
-      productId: !Number.isNaN(productId) ? productId : 1,
+      productId: !Number.isNaN(productId) ? productId : 23145,
       productName: 'Manuela Pants',
     };
     this.getProductName = this.getProductName.bind(this);

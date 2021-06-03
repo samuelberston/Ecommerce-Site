@@ -18,7 +18,7 @@ const logger = (req, res, next) => {
   next();
 };
 
-app.use('/', logger);
+// app.use('/', logger);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
